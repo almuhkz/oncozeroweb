@@ -23,14 +23,14 @@ function App() {
   };
 
   return (
-    <div className="container">
-      <div className="content">
+    <div>
+      <div style={{ width: "80%", marginTop: "5px" }}>
         <div id="papaya_viewer" className="papaya" hidden={nonDicomImg}></div>
         {!!selectedFile && !!nonDicomImg && (
           <img
             alt="Medical file preview"
             src={URL.createObjectURL(selectedFile)}
-            className="preview-image"
+            style={{ width: "900px", height: "700px", objectFit: "contain" }}
             onError={handleURLExpired}
           />
         )}

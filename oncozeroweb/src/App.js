@@ -9,7 +9,7 @@ function App() {
   const [nonDicomImg, setNonDicomImg] = useState(false);
 
   const params = useMemo(() => {
-    const p = []; p["kioskMode"] = true;
+    const p = []; p["kioskMode"] = false;
     return p;
   }, [])
 

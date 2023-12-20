@@ -13,7 +13,10 @@ export const Navbar = () => {
         <div className="navbar-menu">
           <ul className="menu">
             <li>
-              <a href="#" className="font-bold text-lg">
+              <a
+                href="#"
+                className="font-bold text-lg "
+              >
                 Главная
               </a>
             </li>

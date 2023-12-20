@@ -1,0 +1,89 @@
+/* Basic CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  border-bottom: 2px solid #002d85; /* Change the color and thickness as needed */
+  margin-bottom: 20px; /* Adjust space after navbar */
+  display: flex;
+  justify-content: center; /* Center the navbar horizontally */
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px; /* Set a maximum width for the container if needed */
+  width: 100%;
+  padding: 0 20px; /* Add padding for better appearance */
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-menu {
+  text-align: center; /* Center align the menu items */
+}
+
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex; /* Use flexbox for the menu items */
+}
+
+.menu li {
+  margin-left: 20px;
+}
+
+.menu li:first-child {
+  margin-left: 0;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #002d85;
+  font-size: 1.25rem; /* Adjust the font size */
+}
+
+.logo-img {
+  width: 15rem;
+  height: auto;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.text-lg {
+  font-size: 1.25rem;
+}
+
+
+@media screen and (max-width: 768px) {
+  .menu li a {
+    font-size: 1rem; 
+  }
+}
+@media screen and (max-width: 600px) {
+  .menu li a {
+    font-size: 0.7rem; 
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .menu li a {
+    font-size: 0.5rem; 
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .menu li a {
+    font-size: 0.4rem; 
+  }
+}

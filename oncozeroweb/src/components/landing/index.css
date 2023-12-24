@@ -1,3 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.statistic-section {
+  color: #fff;
+  background-color: #1a1a2e; /* Dark background */
+  padding: 2rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+.header {
+  font-size: 2rem; /* Larger text */
+  margin-bottom: 1rem;
+}
+
+.statistic-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.statistic-item {
+  background-color: #16213e; /* Slightly lighter than the section background */
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.number {
+  font-size: 3rem; /* Large, bold number */
+  font-weight: bold;
+}
+
+.text, .subtext {
+  font-size: 1.2rem;
+}
+
 .main {
   margin-top: 300px;
   width: 70%;

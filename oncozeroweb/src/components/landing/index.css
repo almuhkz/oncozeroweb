@@ -1,10 +1,36 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url(https://db.onlinewebfonts.com/c/5bc6b600a84c7a14546bcd4915b2fb4c?family=Convection+Condensed);
+
+.reduce-bottom-padding {
+  padding-top: 200px;    /* Decrease the top padding */
+  padding-bottom: 180px; /* Decrease the bottom padding */
+  margin-top: 10px;     /* Decrease the top margin if necessary */
+  margin-bottom: 10px;  /* Decrease the bottom margin if necessary */
+}
+/* Example of reducing padding/margin of child elements */
+.child-element-class {
+  padding: 5px;
+  margin: 5px;
+}
+.flex-container {
+  display: flex;
+  align-items: flex-start; /* Align items to the top */
+}
+.fixed-height-container {
+  height: 200px; /* Or any other fixed height */
+  overflow: hidden; /* To prevent content from spilling out */
+}
+.text-element-class {
+  font-size: 14px;
+  line-height: 1.2;
+}
+
 
 .statistic-section {
   color: #fff;
-  background-color: #1a1a2e; /* Dark background */
+  background-color: #02358A; /* Dark background */
   padding: 2rem;
   border-radius: 8px;
   margin-top: 2rem;
@@ -12,7 +38,7 @@
 
 .header {
   font-size: 2rem; /* Larger text */
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
 }
 
 .statistic-container {
@@ -22,7 +48,7 @@
 }
 
 .statistic-item {
-  background-color: #16213e; /* Slightly lighter than the section background */
+  background-color: #0f2971; /* Slightly lighter than the section background */
   padding: 1rem;
   border-radius: 8px;
 }
@@ -37,7 +63,8 @@
 }
 
 .main {
-  margin-top: 300px;
+  margin-top: 150px;
+  margin-bottom: 80px;
   width: 70%;
   margin-left: auto;
   margin-right: auto;

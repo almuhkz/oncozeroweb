@@ -529,7 +529,7 @@ export const Landing = () => {
 
 
       <div style={boxStyle }>
-              <h2 style={companyNameStyle}><OncoZeroText>O n c o Z e r o . A I </OncoZeroText></h2>
+              <h2 style={companyNameStyle}><OncoZeroText>OncoZero.AI </OncoZeroText></h2>
               <p style={listItemStyle}>01 fast stroke diagnosis</p>
               <p style={listItemStyle}>02 minimisation of the human factor</p>
               <p style={listItemStyle}>03 internal ecosystem for patients’ data exchange</p>

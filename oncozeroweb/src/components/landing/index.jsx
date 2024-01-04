@@ -15,6 +15,11 @@ import instagramIcon from "../../assets/insta.png"; // Adjust path as necessary
 import leftArrowImage from "../../assets/leftArrow.png"; 
 import rightArrowImage from "../../assets/rightArrow.png"; 
 
+import kbtu from "../../assets/kbtu.png"; 
+import abc from "../../assets/abc.png"; 
+import sc from "../../assets/sc.png"; 
+import qaz from "../../assets/qaz.png"; 
+
 const MyComponent = () => {
   return (
     <div style = {{paddingLeft: '100px' }}className="container mx-auto px-4 reduce-bottom-padding">
@@ -27,7 +32,7 @@ const MyComponent = () => {
             <OncoZeroText>OncoZero.AI</OncoZeroText>
           </h1>
           <p className="description" style={{ color: '#02358A' }}>
-            AI-powered software for early stroke detection for faster and more accurate treatment.
+          Веб платформа на основе искусственного интеллекта для раннего обнаружения опухоли печени, обеспечивающее более быстрое и точное лечение.
           </p>
           {/* Additional content here */}
         </div>
@@ -59,29 +64,24 @@ const CustomArrow = ({ className, style, onClick, arrowDirection }) => {
 
 const awardsData = [
   {
-    imageSrc: logo,
-    title: 'Innovative Tech Company of the Year',
-    description: 'Recognized for exceptional innovation in health tech solutions.',
+    imageSrc: kbtu,
+    title: 'Лучший IT проект',
+    description: 'Лучшее готовое решение среди студентов KZ вузов',
   },
   {
-    imageSrc: logo,
-    title: 'Best Startup Award',
-    description: 'For outstanding achievements in the startup ecosystem.',
+    imageSrc: abc,
+    title: 'Future Unicorn Award',
+    description: '333,333 KZT за огромный потенциал проекта',
   },
   {
-    imageSrc: logo,
-    title: 'Emerging Digital Health Leader',
-    description: 'Awarded for pioneering work in digital health and patient care.',
+    imageSrc: sc,
+    title: 'Demoday WINNER',
+    description: 'Награда за лучший стартап в сфере медицины',
   },
   {
-    imageSrc: logo,
-    title: 'AI Excellence in Healthcare',
-    description: 'For the development of cutting-edge AI technologies in healthcare.',
-  },
-  {
-    imageSrc: logo,
-    title: 'Tech for Good',
-    description: 'Recognizing the positive impact on society through technology.',
+    imageSrc: qaz,
+    title: 'ИИ в здравоохранении',
+    description: 'Первая победа OncoZero.AI',
   },
 ];
 
@@ -113,13 +113,13 @@ const AwardSlider = () => {
   return (
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', padding: '20px', backgroundColor: '#FFFFFF' }}>
       <div style={{ width: '70%' }}>
-      <h2 style={{ textAlign: 'center', marginBottom: '30px', marginTop:'100px', fontSize:'35px' }}>AWARDS</h2>
+      <h2 style={{ textAlign: 'center', marginBottom: '30px', marginTop:'100px', fontSize:'35px', fontWeight:'bold' }}>ПОБЕДЫ</h2>
         <Slider {...settings} style={{marginBottom:'200px'}}>
           {awardsData.map((award, index) => (
             <div key={index} style={{ padding: '10px', backgroundColor: '#02358A', color: '#FFFFFF', borderRadius: '8px' }}>
-              <img src={award.imageSrc} alt={award.title} style={{ width: '100px', height: 'auto', margin: '0 auto', display: 'block' }} />
-              <h3 style={{ textAlign: 'center', marginTop: '20px' }}>{award.title}</h3>
-              <p style={{ textAlign: 'center' }}>{award.description}</p>
+              <img src={award.imageSrc} alt={award.title} style={{ width: 'auto', height: '100px', margin: '0 auto', display: 'block' }} />
+              <h3 style={{ textAlign: 'center', marginTop: '20px', fontSize:'20px', fontWeight:'bold' }}>{award.title}</h3>
+              <p style={{ textAlign: 'center', marginTop: '8px' }}>{award.description}</p>
             </div>
           ))}
         </Slider>
@@ -142,17 +142,16 @@ const StatisticItem = ({ number, text, subtext }) => (
 // The container for the statistics
 const StatisticSection = () => {
   return (
-    <div className="statistic-section">
+    <div className="statistic-section" >
       <div className="header">
-        STROKE STATISTICS IN KAZAKHSTAN
+        СТАТИСТИКА ОНКОЛОГИИ В КАЗАХСТАНЕ
       </div>
-      <div className="statistic-container">
-        <StatisticItem number="№1" text="cause of death" />
-        <StatisticItem number="TOP 30" text="Kazakhstan ranks" subtext="in death statistics due to stroke" />
-        <StatisticItem number="80%" text="survivors have severe disabilities" />
-        <StatisticItem number="40" text="THOUSAND" subtext="stroke cases annually" />
-        <StatisticItem number="52%" text="likelihood of death" />
-        <StatisticItem number="5" text="THOUSAND" subtext="die during the initial 10 days" />
+      <div className="statistic-container" >
+        <p></p>
+        <StatisticItem number="№2" text="причина смерти по распространенности" />
+        <StatisticItem number="50%" text="выживаемость в течении 5 лет" />
+        <StatisticItem number="40,000" text="" subtext="новых онко пациентов в год" />
+        <StatisticItem number="100+" text="видов рака можно найти с КТ" />
       </div>
     </div>
   );
@@ -162,7 +161,7 @@ const StatisticSection = () => {
 const ProblemStatement = () => {
   const problemStyle = {
     fontSize: '48px', // Large font size for the "PROBLEM" text
-    //fontWeight: 'bold',
+    fontWeight: 'bold',
     color: '#FFF',
     textAlign: 'center',
     marginTop: '20px',
@@ -188,12 +187,11 @@ const ProblemStatement = () => {
   return (
     <div style={{ backgroundColor: '#02358A', padding: '50px 20px' }}> {/* Adjust the background color and padding as needed */}
       <div style={problemStyle}>
-        PROBLEM
+        ПРОБЛЕМА
       </div>
       <div style={lineStyle}></div>
       <p style={descriptionStyle}>
-        Besides the lack of highly qualified medical personnel, the main problem with stroke diagnosis lies in the inability of a human eye to detect cytotoxic edema on a CT (computed tomography) scan.
-      </p>
+      Основная проблема диагностики рака заключается в том, что визуально сложно заметить ранние изменения структуры печени на КТ (компьютерной томографии). Более того, нехватка высококвалифицированных специалистов в больницах приводит к выгоранию онкологов</p>
     </div>
   );
 };
@@ -271,14 +269,17 @@ const InfoBoxesSection = () => {
 
   return (
     <div style={boxesRowStyle}>
-      <InfoBox title="QUALIFICATION GAP" text="Shortage of medical staff and a large gap in doctors' qualifications" />
+      <InfoBox title="Дефицит опытных онкологов и радиологов составляет 40%" 
+      text="Министерство здравоохранения РК" />
       <InfoBox 
-        title="HIGH BURDEN ON DOCTORS" 
-        text="The overwhelmed medical staff especially during complex and conflicting cases" 
+        title="75% онко-кейсов обнаружены на поздней стадии.
+        " 
+        text="World Heatlh Organization" 
         style={{ boxShadow: '0 0 10px red', border: '2px solid red' }} // Custom style for red shadow and border
       />
-      <InfoBox title="HUMAN EYE IS UNABLE TO DETECT EMERGING STOKE ON A CT SCAN" text="The human eye is unable to diagnose an emerging cytotoxic edema on a CT scan. Stroke diagnosis by a doctor is possible only after 6 hours from the symptoms' onset" />
-      <InfoBox title="NO PLATFORMS" text="No platform for quick expertise opinion and experience exchange" />
+      <InfoBox title="Визуальная трудность оценки изменений структуры органов." 
+      text="CustDev онкологов" />
+      
     </div>
   );
 };
@@ -364,7 +365,8 @@ const SolutionSection = () => {
   };
 
   const emphasisStyle = {
-    color: '#64FFDA', // Bright color for the emphasized word
+    fontSize: '1.8rem',
+    color: 'red', // Bright color for the emphasized word
     fontWeight: 'bold', // Bold for emphasis
   };
 
@@ -380,7 +382,7 @@ const SolutionSection = () => {
   const bulletPointStyle = {
     height: '10px',
     width: '10px',
-    backgroundColor: '#64FFDA', // Bright color for the bullet point
+    backgroundColor: 'red', // Bright color for the bullet point
     borderRadius: '50%', // Circular bullet points
     display: 'inline-block', // Allows it to sit inline with text
     marginRight: '10px', // Space between bullet point and text
@@ -388,18 +390,18 @@ const SolutionSection = () => {
 
   return (
     <div style={sectionStyle}>
-      <h1 style={titleStyle}>SOLUTION</h1>
+      <h1 style={titleStyle}>РЕШЕНИЕ</h1>
       <p style={subtitleStyle}>
-        AI that identifies brain stroke within 10 minutes helping to prevent neurologic deficit and brain cells death -
-        <span style={emphasisStyle}> CEREBRA</span>
+      <span style={emphasisStyle}> <OncoZeroText>OncoZero.AI</OncoZeroText></span>
+     : Продвинутое обнаружение опухолей на КТ с помощью нейросетей
       </p>
-      <p style={{ fontWeight: 'bold', margin: '1rem 0' }}>As a result:</p>
+      <p style={{ fontWeight: 'bold', margin: '1rem 0' }}>Результат:</p>
       <ul style={resultListStyle}>
         <li style={resultItemStyle}>
-          <span style={bulletPointStyle} />Patient receives immediate treatment
+          <span style={bulletPointStyle} />Быстрый диагноз: Раннее обнаружение рака для своевременного лечения.
         </li>
         <li style={resultItemStyle}>
-          <span style={bulletPointStyle} />Risks of function loss and neurologic deficit are minimised
+          <span style={bulletPointStyle} />Онлайн платформа: Объединяет врачей в единой экосистеме для улучшения медицинского обслуживания.
         </li>
       </ul>
     </div>
@@ -505,7 +507,7 @@ export const Landing = () => {
   };
 
   const companyNameStyle = {
-    fontSize: '84px', // Extra large font size for company name
+    fontSize: '70px', // Extra large font size for company name
     color: '#02358A',
     marginBottom: '20px',
   };
@@ -529,11 +531,10 @@ export const Landing = () => {
 
 
       <div style={boxStyle }>
-              <h2 style={companyNameStyle}><OncoZeroText>OncoZero.AI </OncoZeroText></h2>
-              <p style={listItemStyle}>01 fast stroke diagnosis</p>
-              <p style={listItemStyle}>02 minimisation of the human factor</p>
-              <p style={listItemStyle}>03 internal ecosystem for patients’ data exchange</p>
-              <p style={listItemStyle}>04 any-time remote platform access</p>
+              <h2 style={companyNameStyle}><OncoZeroText>OncoZero.AI </OncoZeroText> предлагает</h2>
+              <p style={listItemStyle}>01 Диагностика рака печени</p>
+              <p style={listItemStyle}>02 Обнаружение опухолей с точностью 80%</p>
+              <p style={listItemStyle}>03 Интернет-экосистема для врачей</p>
       </div>
       <StatisticSection />
 
@@ -543,11 +544,10 @@ export const Landing = () => {
         <div className="text-section">
         <h1 className="maintext"><OncoZeroText>OncoZero.AI</OncoZeroText></h1>
           <p className="description">
-          Chronic infection with hepatitis B virus (HBV) or hepatitis C virus (HCV) is among the leading risk factors for HCC.
-          </p>
+          Рак печени зачастую протекает бессимптомно и часто обнаруживается на поздних стадиях. КТ-скан является одним из методов диагностики, позволяющим врачам подробно изучить состояние печени. </p>
           <p className="description"></p>
           <p className="description">
-          Diagnosis of liver cancer often involves imaging tests such as ultrasound, CT scans, and MRI, along with blood tests to detect liver function and tumor markers.
+          Однако анализ снимков требует времени и опыта, так как специалистам необходимо тщательно оценить каждый сегмент печени для подтверждения наличия опухоли.
           </p>
         </div>
         <img src={logo} alt="Blood" className="image" />

@@ -42,15 +42,21 @@
 }
 
 .statistic-container {
+
+  gap: 1rem;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1rem;
+  align-items: stretch;
 }
 
 .statistic-item {
-  background-color: #0f2971; /* Slightly lighter than the section background */
+  background-color: #0f2971;
   padding: 1rem;
   border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .number {

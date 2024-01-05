@@ -321,20 +321,20 @@ const ContactInfoBox = () => {
     <div style={boxStyle}>
       <div style={{ ...itemStyle, fontSize: '30px', fontWeight: 'bold' }}><OncoZeroText>OncoZero.AI</OncoZeroText></div>
       <div style={itemStyle}>
-        <strong>E-mail:</strong> info@cerebra.kz
+        <strong>E-mail:</strong> oncozero@gmail.com
       </div>
       <div style={itemStyle}>
-        <strong>Address:</strong> Republic of Kazakhstan, Almaty city, Dostyk Avenue, KOKTEM GRAND, 3rd floor, office 53
+        <strong>Адрес:</strong> Республика Казахстан, город Астана, Проспект Мангилик Ел, C1
       </div>
       <div style={itemStyle}>
-        <strong>Office Hours:</strong> Mon-Fri 10:00 to 17:00
+        <strong>Рабочие часы:</strong> Понедельник - Пятница 10:00 to 17:00
       </div>
       <div style={itemStyle}>
-        <strong>Social Networks:</strong>
+        <strong>Социальные сети:</strong>
         <div style={socialIconsStyle}>
-        <a href="https://www.linkedin.com/company/cerebra-ai"><img src={linkedinIcon} alt="LinkedIn" style={iconStyle} /></a>
-        <a href="https://t.me/cerebra_ai"><img src={telegramIcon} alt="Telegram" style={iconStyle} /></a>
-        <a href="https://www.instagram.com/cerebra.ai/"><img src={instagramIcon} alt="Instagram" style={iconStyle} /></a>
+        <a href="https://www.linkedin.com/company/oncozero-ai/"><img src={linkedinIcon} alt="LinkedIn" style={iconStyle} /></a>
+        <a href=""><img src={telegramIcon} alt="Telegram" style={iconStyle} /></a>
+        <a href=""><img src={instagramIcon} alt="Instagram" style={iconStyle} /></a>
       </div>
       </div>
     </div>
@@ -453,7 +453,7 @@ const OurWay = () => {
   };
 
   const imageStyle = {
-    maxWidth: '80%',
+    maxWidth: '100%',
     height: 'auto', 
   };
 

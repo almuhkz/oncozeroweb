@@ -5,13 +5,13 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import "./index.css";
 import liver from "../../assets/liver.png";
-import logo from "../../assets/logo.png"; // Replace with your actual import path
+import logo from "../../assets/logo.png";
 import stat from "../../assets/gender_statistic_web_en.png";
-import standardProcessImage from "../../assets/standart_process_web_en.png"; // Make sure the path is correct
+import standardProcessImage from "../../assets/standart_process_web_en.png";
 import ourWay from "../../assets/ourWay.png";
-import linkedinIcon from "../../assets/linked.png"; // Adjust path as necessary
-import telegramIcon from "../../assets/telegram.png"; // Adjust path as necessary
-import instagramIcon from "../../assets/insta.png"; // Adjust path as necessary
+import linkedinIcon from "../../assets/linked.png"; 
+import telegramIcon from "../../assets/telegram.png"; 
+import instagramIcon from "../../assets/insta.png"; 
 import leftArrowImage from "../../assets/leftArrow.png"; 
 import rightArrowImage from "../../assets/rightArrow.png"; 
 
@@ -22,24 +22,28 @@ import qaz from "../../assets/qaz.png";
 
 const MyComponent = () => {
   return (
-    <div style = {{paddingLeft: '100px' }}className="container mx-auto px-4 reduce-bottom-padding">
+    <div className="container mx-auto px-4 reduce-bottom-padding">
       <div className="pt-16 flex flex-col items-center lg:flex-row">
-        <div className="lg:w-2/5 lg:pr-8 xl:pr-16 mt-10 lg:mt-20 pt-10">
-          <img src={liver} alt="Liver illustration" className="mx-auto" style={{ maxWidth: '100%', width: 'auto' }} />
+        <div className="lg:w-full lg:pr-8 xl:pr-16 mt-10 lg:mt-20 pt-10 lg:order-2">
+          <img
+            src={liver}
+            alt="Liver illustration"
+            className="mx-auto lg:w-2/3 xl:w-1/2 transform hover:scale-105 transition-transform duration-300 image1"
+          />
         </div>
-        <div className="lg:w-3/5 text-center lg:text-left mt-4 lg:mt-0">
-          <h1 className="maintext" style={{ color: '#02358A', fontSize: '64px' }}>
+        <div className="lg:w-full text-center lg:text-left mt-4 lg:mt-0 my-component lg:order-1">
+          <h1 className="maintext text-4xl md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl mb-4 lg:mb-6 xl:mb-8 text-blue-800 font-semibold">
             <OncoZeroText>OncoZero.AI</OncoZeroText>
           </h1>
-          <p className="description" style={{ color: '#02358A' }}>
-          Веб платформа на основе искусственного интеллекта для раннего обнаружения опухоли печени, обеспечивающее более быстрое и точное лечение.
+          <p className="description text-lg md:text-xl lg:text-2xl xl:text-3xl text-blue-800">
+            Веб платформа на основе искусственного интеллекта для раннего обнаружения опухоли печени, обеспечивающее более быстрое и точное лечение.
           </p>
-          {/* Additional content here */}
         </div>
       </div>
     </div>
   );
 };
+
 
 const OncoZeroText = ({ children }) => (
   <span style={{ fontFamily: "'Convection Condensed', sans-serif" }}>
@@ -54,7 +58,6 @@ const CustomArrow = ({ className, style, onClick, arrowDirection }) => {
     display: 'block',
     background: `url(${arrowDirection === 'next' ? rightArrowImage : leftArrowImage}) no-repeat`,
     backgroundSize: 'contain',
-    // Add other styles as needed for positioning, size, etc.
   };
 
   return <div className={className} style={arrowStyles} onClick={onClick} />;
@@ -157,10 +160,9 @@ const StatisticSection = () => {
   );
 };
 
-// ProblemStatement component
 const ProblemStatement = () => {
   const problemStyle = {
-    fontSize: '48px', // Large font size for the "PROBLEM" text
+    fontSize: '48px', 
     fontWeight: 'bold',
     color: '#FFF',
     textAlign: 'center',
@@ -172,7 +174,7 @@ const ProblemStatement = () => {
     height: '2px',
     width: '80%',
     backgroundColor: '#FFF',
-    margin: '0 auto 10px', // Center the line horizontally with margin
+    margin: '0 auto 10px', 
   };
 
   const descriptionStyle = {
@@ -199,7 +201,7 @@ const ProblemStatement = () => {
 const InfoBox = ({ title, text, subtext, style }) => {
   const defaultBoxContainerStyle = {
     backgroundColor: '#02358A',
-    border: '2px solid #FFF', // Default white border
+    border: '2px solid #FFF', 
     borderRadius: '10px',
     padding: '20px',
     margin: '10px',
@@ -208,11 +210,11 @@ const InfoBox = ({ title, text, subtext, style }) => {
     flexDirection: 'column',
     alignItems: 'flex-start',
     justifyContent: 'flex-start',
-    boxShadow: '0 0 10px #FFF', // Default white shadow
+    boxShadow: '0 0 10px #FFF', 
     height: '100%',
   };
 
-  const boxContainerStyle = { ...defaultBoxContainerStyle, ...style }; // Override with custom style
+  const boxContainerStyle = { ...defaultBoxContainerStyle, ...style }; 
 
 
   const titleStyle = {

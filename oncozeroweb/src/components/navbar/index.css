@@ -107,3 +107,70 @@
     font-size: 0.4rem;
   }
 }
+.mobile-menu-button {
+
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-menu-button svg {
+  width: 30px;
+  height: 30px; 
+}
+
+
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.menu li {
+  margin-left: 20px;
+}
+
+.menu li:first-child {
+  margin-left: 0;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #002d85;
+  font-size: 1.25rem;
+  transition: border-bottom 0.3s ease;
+}
+
+.menu li a:hover {
+  border-bottom: 2px solid #002d85;
+}
+
+@media screen and (max-width: 768px) {
+  .mobile-menu-button {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 5.5rem;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border-top: 2px solid #002d85;
+    padding: 10px 20px;
+  }
+
+  .menu.open {
+    display: flex;
+  }
+
+  .menu li {
+    margin: 10px 0;
+  }
+
+  .menu li a {
+    font-size: 1rem;
+  }
+}

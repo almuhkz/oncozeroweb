@@ -5,24 +5,24 @@
 }
 
 .navbar {
-  border-bottom: 2px solid #002d85; /* Change the color and thickness as needed */
-  position: fixed; /* Fix the navbar at the top */
-  top: 0; /* Position at the top of the screen */
+  border-bottom: 2px solid #002d85; 
+  position: fixed; 
+  top: 0; 
   left: 0;
   right: 0;
-  background-color: white; /* Adjust background color as needed */
-  z-index: 1000; /* Set a high z-index to ensure it appears above other elements */
+  background-color: white; 
+  z-index: 1000; 
   display: flex;
-  justify-content: center; /* Center the navbar horizontally */
+  justify-content: center; 
 }
 
 .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1200px; /* Set a maximum width for the container if needed */
+  max-width: 1200px; 
   width: 100%;
-  padding: 10px 20px; /* Add padding for better appearance */
+  padding: 10px 20px; 
 }
 
 .navbar-brand {
@@ -31,14 +31,14 @@
 }
 
 .navbar-menu {
-  text-align: center; /* Center align the menu items */
+  text-align: center; 
 }
 
 .menu {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex; /* Use flexbox for the menu items */
+  display: flex;
 }
 
 .menu li {
@@ -52,12 +52,12 @@
 .menu li a {
   text-decoration: none;
   color: #002d85;
-  font-size: 1.25rem; /* Adjust the font size */
-  transition: border-bottom 0.3s ease; /* Adding transition effect */
+  font-size: 1.25rem; 
+  transition: border-bottom 0.3s ease; 
 }
 
 .menu li a:hover {
-  border-bottom: 2px solid #002d85; /* Adding underline on hover */
+  border-bottom: 2px solid #002d85;
 }
 
 .logo-img {
@@ -73,9 +73,9 @@
   font-size: 1.25rem;
 }
 
-/* Media queries for responsive design - Use the ones you've set previously */
+
 @media screen and (max-width: 768px) {
-  /* Your existing media query rules */
+
 }
 
 @media screen and (max-width: 768px) {
@@ -105,5 +105,72 @@
 @media screen and (max-width: 300px) {
   .menu li a {
     font-size: 0.4rem;
+  }
+}
+.mobile-menu-button {
+
+  display: none;
+  cursor: pointer;
+}
+
+.mobile-menu-button svg {
+  width: 30px;
+  height: 30px; 
+}
+
+
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.menu li {
+  margin-left: 20px;
+}
+
+.menu li:first-child {
+  margin-left: 0;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #002d85;
+  font-size: 1.25rem;
+  transition: border-bottom 0.3s ease;
+}
+
+.menu li a:hover {
+  border-bottom: 2px solid #002d85;
+}
+
+@media screen and (max-width: 768px) {
+  .mobile-menu-button {
+    display: block;
+  }
+
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 5.5rem;
+    left: 0;
+    right: 0;
+    background-color: white;
+    border-top: 2px solid #002d85;
+    padding: 10px 20px;
+  }
+
+  .menu.open {
+    display: flex;
+  }
+
+  .menu li {
+    margin: 10px 0;
+  }
+
+  .menu li a {
+    font-size: 1rem;
   }
 }

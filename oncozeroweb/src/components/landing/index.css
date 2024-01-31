@@ -1,5 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url(https://db.onlinewebfonts.com/c/5bc6b600a84c7a14546bcd4915b2fb4c?family=Convection+Condensed);
+
+.reduce-bottom-padding {
+  padding-top: 10rem;    
+  padding-bottom: 9rem;
+  margin-top: 1rem;    
+  margin-bottom: 1rem;  
+}
+
+.child-element-class {
+  padding: 5px;
+  margin: 5px;
+}
+.flex-container {
+  display: flex;
+  align-items: flex-start; 
+}
+.fixed-height-container {
+  height: 10rem; 
+  overflow: hidden;
+}
+.text-element-class {
+  font-size: 1rem;
+  line-height: 1.2;
+}
+
+
+.statistic-section {
+  color: #fff;
+  background-color: #02358A; 
+  padding: 2rem;
+  border-radius: 8px;
+  margin-top: 2rem;
+}
+
+.header {
+  font-size: 2rem; 
+  margin-bottom: 1.2rem;
+}
+
+.statistic-container {
+
+  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  align-items: stretch;
+}
+
+.statistic-item {
+  background-color: #0f2971;
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.number {
+  font-size: 3rem; 
+  font-weight: bold;
+}
+
+.text, .subtext {
+  font-size: 1.2rem;
+}
+
 .main {
-  margin-top: 300px;
+  margin-top: 150px;
+  margin-bottom: 80px;
   width: 70%;
   margin-left: auto;
   margin-right: auto;
@@ -30,6 +101,47 @@
 
 .image {
   margin-left: 100px;
-  width: 400px;
+  width: 25rem;
   height: auto;
+}
+@media (max-width: 768px) {
+  .image{
+    display:none;
+  }
+
+  .image1 {
+    display: none;
+  }
+
+  .lg:pr-8,
+  .xl:pr-16 {
+    padding-right: 0 !important;
+  }
+
+  .lg:order-1,
+  .lg:order-2 {
+    order: 0 !important;
+  }
+
+  .mt-10,
+  .mt-20 {
+    margin-top: 0 !important;
+  }
+
+  .lg:flex-row {
+    flex-direction: column !important;
+  }
+
+  .text-center,
+  .lg:text-left {
+    text-align: center !important;
+  }
+}
+
+.transform {
+  transition: transform 0.3s ease;
+}
+
+.transform:hover {
+  transform: scale(1.05);
 }

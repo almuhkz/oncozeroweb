@@ -23,7 +23,7 @@ export const Navbar = () => {
           <div className="mobile-menu-button" onClick={toggleMobileMenu}>
             <MenuIcon />
           </div>
-          <ul className={`menu ${isMobileMenuOpen ? 'open' : 'close'}`}>
+          <ul className={`menu ${isMobileMenuOpen ? 'open' : ''}`}>
             <li>
               <a href="#" className="font-bold text-lg" onClick={() => setMobileMenuOpen(false)}>
                 Главная

@@ -19,8 +19,8 @@
   align-items: flex-start; 
 }
 .fixed-height-container {
-  height: 10rem; /* Or any other fixed height */
-  overflow: hidden; /* To prevent content from spilling out */
+  height: 10rem; 
+  overflow: hidden;
 }
 .text-element-class {
   font-size: 1rem;
@@ -60,7 +60,7 @@
 }
 
 .number {
-  font-size: 3rem; /* Large, bold number */
+  font-size: 3rem; 
   font-weight: bold;
 }
 
@@ -105,10 +105,6 @@
   height: auto;
 }
 @media (max-width: 768px) {
-  .lg:w-2/3,
-  .lg:w-1/2 {
-    width: 100% !important;
-  }
   .image{
     display:none;
   }

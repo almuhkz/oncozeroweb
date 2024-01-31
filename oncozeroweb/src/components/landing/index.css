@@ -124,10 +124,6 @@
   animation-name: slidein;
 }
 
-.boxstyle:hover {
-  transform: scale(1.05);
-  animation-name: none;
-}
 .section2 {
   font-size: 4rem;
   color: #002d85;

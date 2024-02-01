@@ -521,7 +521,9 @@ const OurWay = () => {
     maxWidth: "180%", // Set the maximum width to 100%
     height: "auto", // Maintain the aspect ratio
     marginTop: "0.3rem",
+    overflowX: "hidden",
   };
+  
 
   return (
     <div style={containerStyle}>
@@ -579,7 +581,7 @@ export const Landing = () => {
   }, []);
 
   return (
-    <div className="bg-white">
+    <div className="bg-white overflow-hidden">
       <Navbar />
       <MyComponent />
 
